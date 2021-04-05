@@ -14,7 +14,7 @@ public class GuessingGame implements ActionListener {
   int randomNum;
 
   GuessingGame() {
-    randomNum = r.nextInt(101);
+    randomNum = r.nextInt(100) + 1;
 
     JFrame frame = new JFrame("Guessing Game");
     frame.setLayout(new FlowLayout());
@@ -59,7 +59,7 @@ public class GuessingGame implements ActionListener {
       lastGuessLabel.setText("Last guess was " + userGuess.getText());
     }
     else if(ae.getActionCommand().equals("Play Again")) {
-      randomNum = r.nextInt(101);
+      randomNum = r.nextInt(100) + 1;
       promptLabel.setText("Enter your guess: ");
       highLowLabel.setText("");
       lastGuessLabel.setText("");
